@@ -1,7 +1,6 @@
-body {
-	background: #008000;
+body{
+	background: #000;
 	display: flex;
-	text-align: center;
 	justify-content: center;
 	height: 100vh;
 	flex-direction: column;
@@ -14,16 +13,7 @@ body {
 	box-sizing: border-box;
 }
 
-form {
-	width: 500px;
-	border: 2px solid #ccc;
-	padding: 30px;
-	background: #fff;
-	border-radius: 15px;
-	text-align: left;
-}
-
-input {
+input{
     color: #000;
 	display: block;
 	border: 2px solid #ccc;
@@ -33,27 +23,48 @@ input {
 	border-radius: 5px;
 }
 
-label {
+label{
 	color: #000;
 	font-size: 18px;
 	padding: 10px;
 }
 
-button {
-    font-size: 18 px;
-	background: #008000;
-	padding: 10px 15px;
-	color: #fff;
-	border-radius: 5px;
-	margin-right: 10px;
-	border-color: #008000;
+h1{
+	text-align: center;
+	color: black;
+}
+h2{
+    font-size: 40 px;
+    color: white;
 }
 
-button:hover{
+.content{
+	display: inline-block;
+	text-align: left;
+}
+
+a{
+	font-size: 18 px;
+	background: #000;
+	padding: 10px 15px;
+	color: white;
+	margin-right: 10px;
+    border: 2px solid black;
+    text-decoration: none;
+}
+a:hover{
 	opacity: .5;
 }
 
-.error {
+.success{
+	background: #000;
+	color: #fff;
+	padding: 10px;
+	width: 95%;
+	border-radius: 5px;
+	margin: 20px auto;
+}
+.error{
    background: #F2DEDE;
    color: #A94442;
    padding: 10px;
@@ -62,78 +73,96 @@ button:hover{
    margin: 20px auto;
 }
 
-h1 {
-	text-align: center;
-	color: black;
-}
-
-h2 {
-    font-size: 40 px;
-    color: white;
-	margin-left: -25px;
-}
-
-.content {
-	display: inline-block;
-	text-align: left;
-}
-
-a {
-	font-size: 18 px;
-	background: #008000;
-	padding: 10px 15px;
-	color: white;
-	border-radius: 5px;
-	margin-right: 10px;
-    border: 5px solid white;
-	border-radius: 10px;
-    text-decoration: none;
-}
-
-a:hover{
-	opacity: .5;
-}
-
-.success {
-	background: #008000;
-	color: #fff;
-	padding: 10px;
-	width: 95%;
-	border-radius: 5px;
-	margin: 20px auto;
-}
-
-.navbar {
+.navbar{
 	background: white;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 }
-
-.navdiv {
+.navdiv{
 	background: white;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-direction: row;
+	padding: 15px 20px;
+	min-height: 80px;
+}
+.navdiv ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
 }
 
-.logo a {
-	color: #008000;
+.logo a{
+	color: #000;
 	background: white;
 }
-li {
-	display: inline-block;
-}
-li a {
-	margin-right: 50 px;
-}
 
-.form {
+.form{
 	background: #008000;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	flex-direction: column;
+}
+
+form{
+    background-color: white;
+    width: 95%;
+	max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.button-style{
+	font-size: 18px;
+	background: #000;
+	padding: 10x 15px;
+	color: white;
+	border-radius: 5px;
+	margin-right: 10px;
+	text-decoration:none;
+}
+.button-style:hover{
+	opacity: .5;
+}
+
+@media screen and (max-width: 768px){
+    .navbar{
+        position: relative !important;
+        height: auto !important;
+    }
+
+    .navdiv{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .logo a{
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+        white-space: normal;
+    }
+
+    .navdiv ul{
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    .navdiv ul li{
+        width: 100%;
+        text-align: center;
+	}
+    .navdiv ul li a{
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
 }
