@@ -5,16 +5,18 @@ if(isset($_SESSION['user'])){ ?>
     <!DOCTYPE html>
     <html>
         <head>
-            <title>Home</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Transaction</title>
             <link rel="stylesheet" type="text/css" href="style.css">
             <nav class="navbar">
                 <div class="navdiv">
-                    <div class="logo"><a href="#">You are signed into Intentionality as <?php echo 
-                    $_SESSION['user']; ?>.</a></div>
+                    <div class="logo"><a href="#">dfy</a></div>
                     <ul>
                         <li><a href="home.php">Home</a></li>
-                        <li><a href="#">Add a transaction</a></li>
-                        <li><a href="allocation.php">Change budget allocation</a></li>
+                        <li><a href="#">New transaction</a></li>
+                        <li><a href="balances.php">Edit balances</a></li>
+                        <li><a href="allocation.php">Edit allocation</a></li>
+                        <li><a href="about.php">About</a></li>
                         <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </div>
@@ -43,7 +45,7 @@ if(isset($_SESSION['user'])){ ?>
                     <option value="invest">Investments</option>
                     <option value="wants">Wants</option>
                 </select><br><br>
-                <button type="submit" name="transSubmit">Submit</button>
+                <button class="button-style" type="submit" name="transSubmit">Submit</button>
 
             </form>
         </body>
