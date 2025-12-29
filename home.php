@@ -24,16 +24,19 @@ if(isset($_SESSION['user'])){
     <!DOCTYPE html>
     <html>
         <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Home</title>
             <link rel="stylesheet" type="text/css" href="style.css">
             <nav class="navbar">
                 <div class="navdiv">
                     <div class="logo"><a href="#">Hello, <?php echo $_SESSION['user']; ?>! Welcome to 
-                    Intentionality!</a></div>
+                    dontforgetwhy!</a></div>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="transaction.php">Add a transaction</a></li>
-                        <li><a href="allocation.php">Change budget allocation</a></li>
+                        <li><a href="transaction.php">New transaction</a></li>
+                        <li><a href="balances.php">Edit balances</a></li>
+                        <li><a href="allocation.php">Edit allocation</a></li>
+                        <li><a href="about.php">About</a></li>
                         <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </div>
