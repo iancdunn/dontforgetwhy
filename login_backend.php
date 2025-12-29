@@ -10,7 +10,6 @@ if (isset($_POST['login'])) {
 	   return $data;
 	}
 
-	//Cleans up username and password data
 	$username = validate($_POST['username']);
 	$password = validate($_POST['password']);
 
@@ -21,11 +20,11 @@ if (isset($_POST['login'])) {
         header("Location: index.php?error=Password is required");
 	    exit();
 	}else{
-		//Gathers relevant rows from the database that match inputted username
         $stmt = $pdo->prepare("SELECT * FROM users WHERE user = '$username'");
+		
         if ($stmt->execute()){
             $row = $stmt->fetch();
-			//Checks if the password for the specified user matches the user's inputted password
+
             if($row['user'] === $username && password_verify($password, $row['pass'])) {
                 $_SESSION['user'] = $row['user'];
             	header("Location: home.php");
