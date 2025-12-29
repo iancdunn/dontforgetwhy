@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <nav class="navbar">
+            <div class="navdiv">
+                <div class="logo"><a href="#">dfy</a></div>
+                <ul>
+                    <li><a href="signup.php">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
     </head>
     <body>
         <form action="login_backend.php" method="post">
-            <h1>Welcome to Intentionality! Please login.</h1>
+            <h1>Welcome to dontforgetwhy! Please log in.</h1>
             <?php if(isset($_GET['error'])){ ?>
                 <p class="error"> <?php echo $_GET['error']; ?></p>
             <?php } ?>
@@ -15,8 +24,7 @@
             <label>Password</label>
             <input type="password" name="password" placeholder="Password"><br>
 
-            <button type="submit" name="login">Login</button>
-            <a href="signup.php">Sign up</a>
+            <button class="button-style" type="submit" name="login">Log In</button>
         </form>
     </body>
 </html>
